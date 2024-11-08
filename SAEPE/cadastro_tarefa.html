@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="script.js"></script>
+
+<body>
+
+<header class="header">
+    <div class="header-content">
+        <h2 class="title">Gerenciador de Tarefas</h2>
+        <nav class="menu">
+            <a href="cadastro_usuario.html">Cadastro de Usuários</a>
+            <a href="cadastro_tarefa.html">Cadastro de Tarefas</a>
+            <a href="gerenciamento_tarefas.html">Gerenciamento de Tarefas</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <h3>Cadastro de Tarefas</h3>
+    <form method="POST" action="cadastro_tarefa.php">
+        <label for="usuario_id">Usuário:</label>
+        <select id="usuario_id" name="usuario_id" required>
+            <option value="">Selecione um usuário</option>
+            <!-- As opções de usuário devem ser geradas dinamicamente pelo PHP -->
+        </select>
+        
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" name="descricao" required>
+        
+        <label for="setor">Setor:</label>
+        <input type="text" id="setor" name="setor" required>
+        
+        <label for="prioridade">Prioridade:</label>
+        <select id="prioridade" name="prioridade" required>
+            <option value="baixa">Baixa</option>
+            <option value="media">Média</option>
+            <option value="alta">Alta</option>
+        </select>
+        
+        <button type="submit">Cadastrar Tarefa</button>
+    </form>
+</main>
+
+</body>
+</html>
